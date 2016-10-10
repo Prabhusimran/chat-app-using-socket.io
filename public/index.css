@@ -1,0 +1,13 @@
+body{
+
+    text-align: center;
+    margin: 0;
+    background: rgb(0,0,0);
+    color: whitesmoke;
+    font-family: 'Pacifico', cursive;
+
+}
+
+#username{
+    width: 300px;
+}
