@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel = "stylesheet" href="materialize.css" >
     <script src = "socket.io/socket.io.js" ></script>
     <script src = "jquery-3.1.1.js"></script>
+    <script src = "materialize.js"></script>
+    <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!--<link rel="stylesheet" href="index.css">-->
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -14,17 +16,28 @@
 <div class = "username">
 <h2>People call you .....</h2>
 
-<input type="text" id="username" autofocus name="username">
-<input type="submit" id="adduser"  >
-
+<div class="input-field container col s6">
+    <i class="material-icons Large prefix">account_circle</i>
+    <input id = "username" type="text" id="icon_prefix username" autofocus name="username" class="validate">
+    <input type="submit" id="adduser" class="btn-large">
+</div>
 </div>
 
-<div class = "chats">
+<div class="chats container">
 <ul id = "chat-ul"></ul>
-
-    <input type="text" id = "message">
-    <input type = "submit" id = "addmsg">
+    <!--<div class = "col s4 offset-s8">-->
+    <input type="text" id = "message" >
+    <button type="submit" id = "addmsg" class="btn">Send<i class="material-icons right">send</i></button>
+    <!--</div>-->
 </div>
+
+
+
+    <div class = "collection container">
+
+
+    </div>
+
 
 
 </body>

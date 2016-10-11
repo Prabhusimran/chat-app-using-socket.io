@@ -2,12 +2,21 @@ body{
 
     text-align: center;
     margin: 0;
-    background: rgb(0,0,0);
-    color: whitesmoke;
-    font-family: 'Pacifico', cursive;
+    font-size: 200%;
+    background: whitesmoke;
+    color: #555;
+
 
 }
 
 #username{
     width: 300px;
+}
+
+input[type="text"]{
+    font-size: 40px;
+}
+
+.send{
+    margin: 20px;
 }
