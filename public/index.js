@@ -41,13 +41,13 @@ $(function () {
         $.post('/savechats' ,{msg : msg , username : username} , function (rows) {
         } );
 
-        socket.emit("addmsg" , {msg : msg});
+        socket.emit("addmsg" , {username : username , msg : msg});
     });
 
 
 
-    socket.on('chat' , function(msg){
-        $('#chat-ul').append("<li>" +  +  msg + "</li>");
+    socket.on('chat' , function(chatmsg){
+        $('#chat-ul').append("<li>" + chatmsg.username + ": " + chatmsg.msg + "</li>");
     })
 
 

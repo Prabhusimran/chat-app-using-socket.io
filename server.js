@@ -38,7 +38,8 @@ io.on('connection' , (socket)=>{
 
     socket.on("addmsg" , (msg)=>{
 
-        io.emit("chat" , msg.msg);
+        io.emit("chat" , { username : msg.username ,
+                               msg:  msg.msg});
 
     });
     console.log(" id : " + socket.id);
@@ -72,18 +73,10 @@ app.post('/savechats' , (req , res) =>{
 
 });
 
-// app.post('/chat' , (req , res) =>{
-//
-//     console.log(req.body.username);
-//
-//     res.sendFile(path.join(__dirname + '/public/chat.html'));
-//     console.log("hello");
-//
-// });
 
 app.use('/' , express.static(__dirname + "/public"));
 
-server.listen(3000, ()=>{
+server.listen(3000 , ()=>{
 
    console.log("server started at localhost : 3000");
 
